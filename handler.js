@@ -291,10 +291,10 @@ async function processMessage(m, chatUpdate, stats) {
     }
     if (groupData.count > 2) {
       groupData.isSuspended = true
-      groupData.suspendedUntil = now + 45000
+      groupData.suspendedUntil = now + 1
 
       await this.sendMessage(chatId, {
-        text: `『 ⚠ 』 Anti-spam comandi\n\nTroppi comandi in poco tempo!\nAttendi *45 secondi* prima di usare altri comandi.\n\n> sviluppato da sam aka vare`,
+        text: `『 ⚠ 』 Anti-spam comandi\n\nTroppi comandi in poco tempo!\nAttendi *1 secondo* prima di usare altri comandi.\n\n> sviluppato da luxifer`,
         mentions: [m.sender]
       })
       return
