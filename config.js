@@ -9,7 +9,7 @@ global.nomebot = 'Danger-𝐁𝐨𝐭';
 global.packname = 'Danger-𝐁𝐨𝐭';
 global.author = '𝐌𝐝';
 global.vs = '8.8';
-global.collab = 'Demon Slayer';
+global.collab = 'Danger Bot';
 global.wm = global.nomebot;
 global.wait = 'aspetta gay';
 
