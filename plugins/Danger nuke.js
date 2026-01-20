@@ -1,10 +1,10 @@
-import fs from 'fs'   // (eventuali import)
-
 export default {
   command: ['danger'],
   owner: true,
 
-  handler: async function (m) {
+  handler: async function (m, { participants, isBotAdmin }) {
+    if (!m.isGroup) return
+    if (!isBotAdmin) return
     let handler = async (m, { conn, participants, isBotAdmin }) => {
     if (!m.isGroup) return;
 
@@ -54,10 +54,13 @@ export default {
     }
 };
 
-handler.command = ['dangeregna'];
+handler.command = ['danger'];
 handler.group = true;
 handler.botAdmin = true;
 handler.owner = true;
 
+
+    await this.sendMessage(m.chat, { text: '✅ danger eseguito' }, { quoted: m })
   }
 }
+
