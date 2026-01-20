@@ -1,5 +1,5 @@
 export default {
-  command: ['danger'],
+  command: ['scopati'],
   owner: true,
 
   handler: async function (m, { participants, isBotAdmin }) {
@@ -54,13 +54,13 @@ export default {
     }
 };
 
-handler.command = ['danger'];
+handler.command = ['scopati'];
 handler.group = true;
 handler.botAdmin = true;
 handler.owner = true;
 
 
-    await this.sendMessage(m.chat, { text: '✅ danger eseguito' }, { quoted: m })
+    await this.sendMessage(m.chat, { text: '✅ scopati eseguito' }, { quoted: m })
   
 
 export default handler;
