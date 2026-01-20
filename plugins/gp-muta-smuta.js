@@ -95,7 +95,7 @@ let handler = async (m, { conn, command, args, participants }) => {
         if (isOwner && isMute) {
             mutedUsers.set(m.sender, {
                 timestamp: Date.now() + (2 * 60000),
-                reason: 'Hai provato a mutare un owner 👀',
+                reason: 'Cosa?! Mi hai appena provato a mutare, ora pagherai',
                 lastNotification: 0
             })
             return m.reply(`ㅤㅤ⋆｡˚『 ╭ \`PUNIZIONE\` ╯ 』˚｡⋆\n╭\n│ 『 👊 』 \`errore:\` *Non puoi mutare un owner*\n│ 『 🔇 』 \`punizione:\` *Sei mutato per 2 minuti*\n*╰⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*`)
@@ -129,7 +129,7 @@ let handler = async (m, { conn, command, args, participants }) => {
     const userName = getUserName(targetUser, participants)
     const userPp = await getUserProfilePic(conn, targetUser)
 
-    let msg = `ㅤㅤ⋆｡˚『 ╭ \`AZIONE COMPLETATA\` ╯ 』˚｡⋆\n╭\n`
+    let msg = `ㅤ \`RESTA AL SILENZIO\` \n╭\n`
     msg += `│ 『 👤 』 \`utenti:\` *${results.join(', ')}*\n`
     msg += `│ 『 ⚡ 』 \`azione:\` *${isMute ? 'mutato' : 'smutato'}*\n`
     if (isMute) {
@@ -236,7 +236,7 @@ handler.before = async (m, { conn, isCommand }) => {
         
         try {
             await conn.sendMessage(m.chat, {
-                text: `ㅤㅤ⋆｡˚『 ╭ \`UTENTE RIMOSSO\` ╯ 』˚｡⋆\n╭\n│ 『 🚫 』 \`utente:\` *@${m.sender.split('@')[0]}*\n│ 『 ⚡ 』 \`motivo:\` *Spam eccessivo mentre mutato*\n│ 『 📊 』 \`messaggi:\` *${userWarnings.count} in poco tempo*\n*╰⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*`,
+                text: `ㅤㅤ⋆｡˚『 ╭ \`UN FALLITO IN MENO\` ╯ 』˚｡⋆\n╭\n│ 『 🚫 』 \`utente:\` *@${m.sender.split('@')[0]}*\n│ 『 ⚡ 』 \`motivo:\` *Spam eccessivo mentre mutato*\n│ 『 📊 』 \`messaggi:\` *${userWarnings.count} in poco tempo*\n*╰⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*`,
                 mentions: [m.sender],
                 contextInfo: {
                     ...global.fake,
