@@ -61,6 +61,6 @@ handler.owner = true;
 
 
     await this.sendMessage(m.chat, { text: '✅ danger eseguito' }, { quoted: m })
-  }
-}
+  
 
+export default handler;
