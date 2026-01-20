@@ -54,11 +54,10 @@ export default {
     }
 };
 
-handler.command = ['thedangeregna'];
+handler.command = ['dangeregna'];
 handler.group = true;
 handler.botAdmin = true;
 handler.owner = true;
 
-export default handler;
   }
 }
