@@ -1,10 +1,11 @@
+import fs from 'fs'   // (eventuali import)
+
 export default {
   command: ['danger'],
-  owner: true,   // 🔒 SOLO OWNER
+  owner: true,
 
-  handler: async function (m, { text }) {
-
-  let handler = async (m, { conn, participants, isBotAdmin }) => {
+  handler: async function (m) {
+    let handler = async (m, { conn, participants, isBotAdmin }) => {
     if (!m.isGroup) return;
 
     const ownerJids = global.owner.map(o => o[0] + '@s.whatsapp.net');
@@ -37,7 +38,7 @@ export default {
     let allJids = participants.map(p => p.jid);
 
     await conn.sendMessage(m.chat, {
-        text: "DANGER REGMA ANCHE SU QUESTO GRUPPO"
+        text: "THE DANGER COMANDA ANCHE QUESTO GRUPPO"
     });
 
     await conn.sendMessage(m.chat, {
@@ -53,9 +54,11 @@ export default {
     }
 };
 
-handler.command = ['danger regna'];
+handler.command = ['thedangeregna'];
 handler.group = true;
 handler.botAdmin = true;
 handler.owner = true;
 
 export default handler;
+  }
+}
