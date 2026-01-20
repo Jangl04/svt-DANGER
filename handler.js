@@ -289,6 +289,7 @@ async function processMessage(m, chatUpdate, stats) {
     } else {
       groupData.count++
     }
+    /*
     if (groupData.count > 2) {
       groupData.isSuspended = true
       groupData.suspendedUntil = now + 1
@@ -299,6 +300,7 @@ async function processMessage(m, chatUpdate, stats) {
       })
       return
     }
+    */
   }
 
   try {
