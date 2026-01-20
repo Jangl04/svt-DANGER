@@ -129,7 +129,7 @@ let handler = async (m, { conn, command, args, participants }) => {
     const userName = getUserName(targetUser, participants)
     const userPp = await getUserProfilePic(conn, targetUser)
 
-    let msg = `ㅤㅤ⋆｡˚『 ╭ \`AZIONE COMPLETATA\` ╯ 』˚｡⋆\n╭\n`
+    let msg = `ㅤ⋆ \`RESTA AL SILENZIO\` ⋆\n╭\n`
     msg += `│ 『 👤 』 \`utenti:\` *${results.join(', ')}*\n`
     msg += `│ 『 ⚡ 』 \`azione:\` *${isMute ? 'mutato' : 'smutato'}*\n`
     if (isMute) {
