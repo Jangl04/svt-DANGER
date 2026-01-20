@@ -15,9 +15,9 @@ global.wait = 'aspetta gay';
 
 
 global.owner = [
-  ['212781816909', 'Danger', true],
-  ['1(609)3013226', 'Danger', true], 
-  ['390935931875', 'Danger', true], 
+  ['212781816909', 'Luxifer', true],
+  ['1(609)3013226', 'MrCiao', true], 
+  ['390935931875', 'Tom', true], 
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx']
